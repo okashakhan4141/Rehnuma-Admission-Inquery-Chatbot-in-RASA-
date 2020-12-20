@@ -1,0 +1,188 @@
+version: "2.0"
+
+stories:
+
+#- story: calculate aggregate
+#  steps:
+#  - intent: calculate_aggregate
+#    entities:
+#    - fsc: "960"
+#    - test: "50"
+#  - action: utter_tell_aggregate
+
+- story: calculate aggregate
+  steps:
+    - intent: how_to_calculate_aggregate
+    - action: utter_ask_fsc_marks
+    - intent: fsc_marks
+#      entities:
+#      - fsc: "960"
+    - slot_was_set:
+        - fsc: "960"
+    - action: utter_ask_test_marks
+    - intent: test_marks
+#      entities:
+#      - test: "60"
+    - slot_was_set:
+        - test: "60"
+    - action: action_calculate_aggregate
+
+- story: greet
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: tell about closing_merit
+  steps:
+  - intent: closing_merit
+  - action: utter_ask_closing_merit
+
+- story: tell about programs_offered
+  steps:
+  - intent: programs_offered
+  - action: utter_ask_programs_offered
+
+- story: tell about merit_list_date
+  steps:
+  - intent: merit_list_date
+  - action: utter_ask_merit_list_date
+
+- story: tell about no_of_merit_list
+  steps:
+  - intent: no_of_merit_list
+  - action: utter_ask_no_of_merit_list
+
+- story: tell about merit_calculation
+  steps:
+  - intent: merit_calculation
+  - action: utter_ask_merit_calculation
+
+- story: tell about ragging
+  steps:
+  - intent: ragging
+  - action: utter_ask_ragging
+
+- story: tell about events
+  steps:
+  - intent: events
+  - action: utter_ask_events
+
+- story: tell about finalcial_aid
+  steps:
+  - intent: finalcial_aid
+  - action: utter_ask_finalcial_aid
+
+- story: tell about entry_test_schedule
+  steps:
+  - intent: entry_test_schedule
+  - action: utter_ask_entry_test_schedule
+
+- story: tell about entry_test_pattern
+  steps:
+  - intent: entry_test_pattern
+  - action: utter_ask_entry_test_pattern
+
+- story: tell about sports
+  steps:
+  - intent: sports
+  - action: utter_ask_sports
+
+- story: tell about scholarship
+  steps:
+  - intent: scholarship
+  - action: utter_ask_scholarship
+
+- story: tell about admission_procedure
+  steps:
+  - intent: admission_procedure
+  - action: utter_ask_admission_procedure
+
+- story: tell about docs_for_admission
+  steps:
+  - intent: docs_for_admission
+  - action: utter_ask_docs_for_admission
+
+- story: tell about admission_requirement
+  steps:
+  - intent: admission_requirement
+  - action: utter_ask_admission_requirement
+
+- story: tell about fee_structure
+  steps:
+  - intent: fee_structure
+  - action: utter_ask_fee_structure
+
+- story: tell about semester_system_info
+  steps:
+  - intent: semester_system_info
+  - action: utter_ask_semester_system_info
+
+- story: tell about cr_hour_info
+  steps:
+  - intent: cr_hour_info
+  - action: utter_ask_cr_hour_info
+
+- story: tell about refund_policy
+  steps:
+  - intent: refund_policy
+  - action: utter_ask_refund_policy
+
+- story: tell about admission_open
+  steps:
+  - intent: admission_open
+  - action: utter_ask_admission_open
+
+- story: tell about campus_migration
+  steps:
+  - intent: campus_migration
+  - action: utter_ask_campus_migration
+
+- story: tell about admission_deadline
+  steps:
+  - intent: admission_deadline
+  - action: utter_ask_admission_deadline
+
+- story: tell about campus_life
+  steps:
+  - intent: campus_life
+  - action: utter_ask_campus_life
+
+- story: tell about field_transfer
+  steps:
+  - intent: field_transfer
+  - action: utter_ask_field_transfer
+
+- story: tell about hostel_info
+  steps:
+  - intent: hostel_info
+  - action: utter_ask_hostel_info
+
+- story: tell about parking
+  steps:
+  - intent: parking
+  - action: utter_ask_parking
+
+- story: tell about transportation
+  steps:
+  - intent: transportation
+  - action: utter_ask_transportation
+
+- story: tell about grading_system
+  steps:
+  - intent: grading_system
+  - action: utter_ask_grading_system
+
+- story: tell about socities
+  steps:
+  - intent: socities
+  - action: utter_ask_socities
+
+- story: tell about facilities
+  steps:
+  - intent: facilities
+  - action: utter_ask_facilities

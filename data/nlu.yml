@@ -1,0 +1,382 @@
+version: "2.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - good morning
+    - good evening
+    - how you doing?
+    - hey there
+    - kesy ho
+    - who are you?
+    - kn ho tm?
+    - salam!
+
+#- intent: calculate_aggregate
+#  examples: |
+#    - mery fcs mai [800]{"entity":"fsc"} marks hain or entry test mai [60]{"entity":"test"}. mera aggregate kya bany ga?
+#    - agr fsc mai [960]{"entity":"fsc"} number hn or test mai [50]{"entity":"test"} to kya admission ho jye ga?
+#    - FSC marks: [900]{"entity":"fsc"}, Entry Test marks: [40]{"entity":"test"}. kya admission ho jye ga?
+#    - mery entry test mai [55]{"entity":"test"} marks aye hain or FSC mai [1000]{"entity":"fsc"}. kya admission ho jye ga?
+#    - agr test mai [70]{"entity":"test"} marks ayain or fsc mai [750]{"entity":"fsc"} hn to kya admission ho jata hai?
+#    - entry test k [60]{"entity":"test"} or fsc k [850]{"entity":"fsc"} pr kya aggregate bany ga?
+
+- intent: how_to_calculate_aggregate
+  examples: |
+    - aggregate kesy calculate krou?
+    - mjhy agrregate calculate krna hai!
+    - i want to calculate aggregate
+    - aggregate calculation
+    - calculate aggreagte
+    - mjhy aggregate nikalna hai
+    - aggregate niaklo
+    - calculate my aggregate
+    - aggregate calculator
+
+- intent: fsc_marks
+  examples: |
+    - mery fsc k marks [960]{"entity":"fsc"} hain
+    - [700]{"entity":"fsc"} marks in fsc
+    - FSC mai [1010]{"entity":"fsc"} number hain
+    - fsc mai [960]{"entity":"fsc"} marks
+    - fsc mai [960]{"entity":"fsc"}
+    - [1050]{"entity":"fsc"} marks in FSC
+    - mery FSC mai [960]{"entity":"fsc"} marks thay
+
+- intent: test_marks
+  examples: |
+    - mery entry test mai [60]{"entity":"test"} marks aye hain
+    - entry test mai [70]{"entity":"test"}
+    - test mai [49]{"entity":"test"}
+    - test mai [60]{"entity":"test"} marks hain
+    - [50]{"entity":"test"} marks in Entry test
+    - mery test mai [60]{"entity":"test"} marks hain
+    - let say [50]{"entity":"test"}
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you around
+    - see you later
+    - bad mai bat krty
+    - shukriya
+    - bht shukriya
+    - Allah hafiz!
+    - ok
+
+- intent: closing_merit
+  examples: |
+    - closing merit for CS?
+    - Fast ka aggregate kitnay pr end hua?
+    - Minimum aggregate kya hai?
+    - FAST CS ka closing merit kya hota hai
+    - fast ka merit?
+    - FAST mein admission kay liye aggregate kya hota hai?
+    - FAST CS ka closing merit kya hota hai
+    - Fast ka last year cybersecurity may admission kitnay par close hua tha?
+    - "fast ka merit es saal Kya tha?"
+    - Computer Science mein admission kay liye aggregate kya hota hai?
+    - Kitne aggregate par admission hota he usually?
+    - Iss saal ka closing merit kya hoga?
+    - fast ka final  aggregate kitna ha admission kay liay?
+    - merit kitna hota ha?
+
+- intent: programs_offered
+  examples: |
+    - FAST mein kon kon se programs available hain?
+    - programms offered in FAST?
+    - FAST kay programs?
+    - fast mai kn knsi fields hain?
+    - fast ki fields/programs?
+
+- intent: merit_list_date
+  examples: |
+    - Fast ki merit list kb lgy gi
+    - merit list kab display ho gai
+    - merit list
+    - merit list date?
+
+- intent: no_of_merit_list
+  examples: |
+    - fast mai kitni merit lists lagti hain?
+    - fast ki 2sri list kab lagy gi
+    - fast mai second list kab lagy gi
+    - no of meir lists in fast?
+    - FASTNU kitni merit lists lagati hai?
+
+- intent: merit_calculation
+  examples: |
+    - merit kesay nikalty hein?
+    - how to calculate merit?
+    - CS ka merit kesy nikalou?
+    - ee ka merit kesy nikalta hai?
+    - merit calculation formula?
+
+- intent: ragging
+  examples: |
+    - kya fast mai ragging hoti hai?
+    - ragging ka kya scene hai?
+    - ragging to nhi hoti?
+    - seniors ragging krty hain
+    - ragging kesi hoti hai
+    - Meri abhi tak ragging nahi huwi, kiun?
+
+- intent: events
+  examples: |
+    - Fast ky events kn knsy hty hain?
+    - Fast mein welcome party hoti ha ya nhi?
+    - Fast mn Events hoty hn Ya nahin Aur party Scene kesa hai?
+    - FAST batch 2020 ki welcome Party kab hogi ?
+    - Fast mei saal mei kitnay events hote hain ?
+    - Welcome kab ho gi?
+    - Sports events hotay hain ?
+    - FAST mae parties hoti hain?
+    - Kia fast mein events hote hai?
+    - parties hoti hain ?
+    - Yahan koi events hotay hain?
+    - Nascom ky ilawa kya events hotay hain?
+    - Social events ka kia calendar hai?
+    - events kitny hoty hy per anum
+
+- intent: finalcial_aid
+  examples: |
+    - Financial aid ke liye apply karne ki last date kiya he?
+    - if someone is on financial aid then he has to pay fee after degree. is it true..?
+    - Kitni kamai pe kitna financial aid milta he?
+    - Fast mein need-base scholarship ka procedure kya hai ?
+
+- intent: entry_test_schedule
+  examples: |
+    - FAST ka entry test kab hai?
+    - entry test schedule?
+    - entry test date
+    - fast k entry test ki kya date hai?
+    - entry test kab ho ga
+    - fast ka test kab hai
+    - test kab ho ga?
+
+- intent: entry_test_pattern
+  examples: |
+    - FAST me entry test ka kia pattern ha?
+    - Fast ka entry test kesa ata hai ?
+    - FAST ma admission ka liye koi entry test hota han
+    - FAST ka apna entry test hota ha ya SAT only?
+    - Aur admission test kaisa hota hai?
+
+- intent: sports
+  examples: |
+    - sports ka kya scene hota ?
+    - kya spoorts based admission hai
+    - kn knsy sports hain fast mai
+    - Kya FAST main cricket tournaments hotay hain?
+    - national level pr events hoty hain??
+
+- intent: scholarship
+  examples: |
+    - Salam! Scholarship kese li ja skti hai?
+    - "fast mein scholarships miltee Hain?"
+    - FAST mein merit based scholarships ka criteria kya hai
+    - FAST mein scholarships hain?
+    - FAST mein merit based scholarships ka criteria kya hai
+    - Kya FAST mein mujhe scholarship mile ga?
+    - FAST mein kitni maximum scholarship offer ho sakti hai?
+    - Fast mein scholarships milti hain?
+    - How do I can get scholarship?
+    - Does FAST offer scholarships, if so what’s the criteria?
+    - Scholarships dete hein?
+    - any scholarship available for orphans?
+    - Fast Scholarships Deti h Ya nahin?
+    - Merit based or need based scholarships Kis criteria k according milti Hain?
+    - FAST merit based scholarships offer karti hai?
+    - fast me scholarship ki kia conditions hn?
+    - fast ma cgpa ki base pa scholarship milti ha
+    - Scholarship ka kya criteria hai?
+    - fast mein koi scholarship aesa h k abroad parhne ki opportunity mile
+
+- intent: admission_procedure
+  examples: |
+    - Admission ka procedure kia hai?
+    - admission procedure kya hai?
+    - admission procedure?
+    - admission ka kya tareeqa hai
+    - fast mai admission process kiya hai?
+
+- intent: docs_for_admission
+  examples: |
+    - FAST ke admission process mein konse documents chahye hen?
+    - admission k liye kn knsy docs chiye?
+    - docs required for admission
+    - documents required for admission?
+
+- intent: admission_requirement
+  examples: |
+    - What is the minimum requirement to be considered for admission?
+    - FASTNU, CS programme mein admission ke leye HSSC mein kitny marks lene hoty hain?
+    - Ms/Bs(any dept) ki kya requirements hain?
+    - FAST mein admission ke liye kitne SSC or equivalent marks chahye hen?
+    - Admission kay liye kitna aggregate chahiye hota hai ?
+    - A levels ke kya grade chaye admission confirm karne ke liye?
+    - fast me admission leny ky lye nts me ktny no. chaiye hoty bhai
+    - FAST kay admission kay liyay Alevels walon ko equivalence chahiyay hoti ya baad mein jama ho sakti?
+    - Apply karne ke liye minimum O/A Levels grades kiya hain?
+    - yahan par admission criteria kya hay
+    - SAT basis pey apply kerne ka tareeqa kia hai? please, elaborate kerkey bataye
+    - FAST mein admission kis basis pr hota
+    - FAST mein Pre-Medical wale apply kar sakte hain?
+    - FAST kon kon sy entry tests accept kerta?
+    - FAST mein O'Levels Equivalence submit karwaney key baghair admission ho sakta hai?
+    - Fast main admission k lia fsc ka kia merit  a?
+    - FAST mai admission kay liye FSC mai atleast kitnay marks honay chahiyein?
+
+- intent: fee_structure
+  examples: |
+    - Fast ka fee structure kaya hai?
+    - What is the fee structure? Do we have to pay 186,000 every semester?
+    - Fast ki fees?
+    - Fast ka fee structure kya hai?
+    - Is the fee mentioned on the site semester wise or per annum?
+    - Aik semester ki fees kia ha?
+
+- intent: semester_system_info
+  examples: |
+    - Fast ma 2nd semester kb start hoga?
+    - semester plan kya hai?
+    - semester kab start ho ga
+    - 2nd semester kab tk start ho jye ga?
+    - semester system kya hai fast main?
+
+- intent: cr_hour_info
+  examples: |
+    - Credit hours kya hote hain?
+    - Aik degree mei kitne credit hours hote hai?
+    - 1 semester mai kitny credit hours hoty hain?
+    - semester mai kitny cr. hour parh skty hain
+    - total kitny cr. hours parhny hoty hain?
+
+- intent: refund_policy
+  examples: |
+    - What is the refund policy for admissions?
+    - Fast ki refund policy ki details Kia hain?
+    - refund ka kya scene hai?
+    - refund ki kya policy hai?
+    - refund kesy hota hai
+    - kya fees refund ho skti hai?
+    - how to refund fee in fast?
+
+- intent: admission_open
+  examples: |
+    - Admisson kb start hon gai
+    - admissions kab start hote hein?
+    - admissions kab open hoty hain?
+    - Admission open kabb se ho rahay hain?
+    - Admission open kabb se ho rahay hain?
+    - admission kb sy open hn gy fast mai?
+
+- intent: campus_migration
+  examples: |
+    - Lahore campus migrate kaisay ker saktay hain
+    - ho to migrate in different campuses?
+    - 2sry campus mai migration krwa skty hain?
+    - kya admission k bad mai apna campus change kr skta hn
+    - faisalabad mai migration kesy ho gi?
+    - migration krwany ki kya policy hai?
+    - migration policy in fast?
+
+- intent: admission_deadline
+  examples: |
+    - Fast ki undergraduate application ki deadline Kia Hai?
+    - admission deadline in fast
+    - deadline for admission?
+    - last date to apply for admission?
+    - admission last date?
+
+- intent: campus_life
+  examples: |
+    - Fast ki campus life kaisee hai
+    - "Yahan social life kaisi ho gi?
+    - fast ka mahol kaisa hai
+    - FAST mai social life kesi ha?
+    - FAST ka campus life kesa hai?
+    - Fast ka environment kesa ha
+    - Fast uni me Maholl Kaisa Hy Full yes Mahool Hy Ya nhy is me poor students ja kr Khush reh sakty
+    - Fast ka environment kesa hai
+
+- intent: field_transfer
+  examples: |
+    - Admission k bad field change ho skti?
+    - can i change program?
+    - kya mai CS sai EE mai ja skta hn?
+    - kya field change kr skta hn
+    - degree change krwany ka kya tareeqa hai?
+    - how to change program/decepline/degree?
+
+- intent: hostel_info
+  examples: |
+    - fast ka apna hostel hai??
+    - Fast kai apnai hostel hai?
+    - Fast ka girls hostel hai k nai?
+    - Fast ki hostel facilities kia hain?
+    - Fast ka offical hostel ha
+    - Fast ka apna koi hostel ha?
+    - Fast ke pas hostels?
+    - Fast ki walking distance pr hostel mil jaye ga?
+    - Fast kei apnay hostels nahi hain?
+    - Fast k recommended hostels konsy hain?
+    - Kya FAST Islamabad ka apna girls hostel hai?
+    - FAST ke qareeb konsay konsay hostels mojood hain?
+    - Fast kai student kai liye best hostel konsa hai?
+
+- intent: parking
+  examples: |
+    - FAST may student parking ka Kya intayzam hai?
+    - parking hai campus mai?
+    - kya safe parking ka koi scene hai?
+    - where to park?
+    - can i park my bike inside the campus?
+    - baki khri krny ki jaga hai campus mai?
+
+- intent: transportation
+  examples: |
+    - FAST ki apni transportation wali bus ha?
+    - Bus kai routes kya hain?
+    - FAST ka koi apna transportation system hai?
+    - Fast ki apni bus service hai? Agar hai tou kin routes mei jati hai?
+    - Kia fast apni transport service provide karta hai ?
+    - Fast ki apni transport facility hai?
+    - pick and drop service huti hai
+
+- intent: grading_system
+  examples: |
+    - Grading system kesa hai?and how can we maintain a good gpa?
+    - Fast grading kese krta hai
+    - Fast ki grading scheme kya hai?
+    - grade kesy milta hai fast main?
+    - grading system kya hai?
+    - grading kesy hoti hai?
+    - absolute grading hai relative?
+
+- intent: socities
+  examples: |
+    - societies k liay registration kab open hogi?
+    - FAST May societies ka kia scene hay?
+    - Kya FAST main esports ya gaming society hai?
+    - kon kon se groups and societies Hein
+    - Are there societies to join
+    - FAST ma societies konsi hain?
+    - fast mai kn knsi socities hain?
+
+- intent: facilities
+  examples: |
+    - Fast mein kia facilities hain?
+    - facilities in fast?
+
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - What is 2 + 2?
+    - Who's the US President?
+    - jhull oy
